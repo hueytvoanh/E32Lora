@@ -7,4 +7,7 @@ https://github.com/xreef/LoRa_E32_Series_Library
 
 <img width="850" height="251" alt="image" src="https://github.com/user-attachments/assets/09c23fa6-5f71-4fa4-b9d5-4d85b7fdd044" />
 
+<img width="823" height="432" alt="image" src="https://github.com/user-attachments/assets/022dcf28-63fc-425a-9b09-950d798aefd9" />
+
+
 
