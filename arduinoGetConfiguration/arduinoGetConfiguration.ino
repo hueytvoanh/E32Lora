@@ -16,29 +16,34 @@
 #include "Arduino.h"
 #include "LoRa_E32.h"
 
-#define M0        16
-#define M0        17
-#define AUX       4
+#define M0_PIN         16
+#define M1_PIN         17 
+#define RX_PIN 19
+#define TX_PIN 18
 
-HardwareSerial mySerial(2); // UART1
+//LoRa_E32 e32ttl100(2, 3); // Arduino RX <-- e32 TX, Arduino TX --> e32 RX
 
-LoRa_E32 e32ttl100(&mySerial); // Arduino RX <-- e32 TX, Arduino TX --> e32 RX
 void printParameters(struct Configuration configuration);
 void printModuleInformation(struct ModuleInformation moduleInformation);
 
-void configIO(void){    
-  pinMode(M0  , OUTPUT); 
-  pinMode(M1  , OUTPUT); 
-  pinMode(AUX  , OUTPUT); 
-
-  digitalWrite(M0, HIGH);
-  digitalWrite(M1, HIGH);
-  digitalWrite(AUX, HIGH);
+void configIo(void){
+    pinMode(M0_PIN , OUTPUT); 
+    pinMode(M1_PIN , OUTPUT);   
+    digitalWrite(M0_PIN, HIGH);
+    digitalWrite(M1_PIN, HIGH);
+    delay(2000);
 }
 
 void setup() {
 	Serial.begin(9600);
 	delay(500);
+
+  Serial1.begin(115200, SERIAL_8N1, RX_PIN, TX_PIN);
+  //Serial1.begin(9600, SERIAL_8N1, RX_PIN, TX_PIN);
+  Serial.println("UART1 initialized on pins 38 (TX) and 39 (RX)");
+
+  //LoRa_E32 e32ttl100(&Serial1,18, 21, 19); 
+  LoRa_E32 e32ttl100(&Serial1); 
 
 	// Startup all pins and UART
 	e32ttl100.begin();
