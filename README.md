@@ -12,5 +12,13 @@ https://github.com/xreef/LoRa_E32_Series_Library
 # Naming 
 https://github.com/xreef/LoRa_E32_Series_Library/blob/e1031ec7fa293bdc46b2508cb6f588c6de3f27e7/includes/statesNaming.h#L225
 
+# Sending Message
+FT_TRANSPARENT_TRANSMISSION:  you can send message to all device of same configured address and channel. \
+FT_FIXED_TRANSMISSION: you can specify an address and a channel where where you want send the message. \
+Message Format: HHLL xx aabbcc \
+<img width="620" height="659" alt="image" src="https://github.com/user-attachments/assets/d0e215ea-3109-40e1-966a-1361b6c2b71f" />
+
+
+
 
 
