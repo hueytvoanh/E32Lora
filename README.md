@@ -23,6 +23,11 @@ FT_FIXED_TRANSMISSION: you can specify an address and a channel where where you 
 Message Format: HHLL xx aabbcc \
 <img width="620" height="659" alt="image" src="https://github.com/user-attachments/assets/d0e215ea-3109-40e1-966a-1361b6c2b71f" />
 
+# Battery Charger 
+https://emariete.com/en/co2-meter-with-battery-well-done/
+<img width="739" height="546" alt="image" src="https://github.com/user-attachments/assets/34797a2c-88c3-4aa6-b968-bf72f3b84370" />
+
+
 
 
 
